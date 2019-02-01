@@ -99,7 +99,9 @@
 
 改变生活从改变自己开始。
 
-<img style="display: block;margin: 0 auto; width: 40%;" src="https://raw.githubusercontent.com/MiracleYoung/You-are-Pythonista/master/static/image/%E7%9F%A5%E8%AF%86%E6%98%9F%E7%90%83-%E4%BA%BA%E4%BA%BA%E9%83%BD%E6%98%AFPythonista.jpeg" alt="知识星球二维码">
+<div align="center">
+    <img width="40%" src="https://raw.githubusercontent.com/MiracleYoung/You-are-Pythonista/master/static/image/%E7%9F%A5%E8%AF%86%E6%98%9F%E7%90%83-%E4%BA%BA%E4%BA%BA%E9%83%BD%E6%98%AFPythonista.jpeg" alt="知识星球二维码">
+</div>
 
 
 

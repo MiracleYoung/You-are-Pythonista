@@ -99,5 +99,8 @@
 
 改变生活从改变自己开始。
 
-![知识星球二维码](./static/imgag/知识星球-人人都是Pythonista.jpeg)
+<img width="60%" align="center" src="https://raw.githubusercontent.com/MiracleYoung/You-are-Pythonista/master/static/image/%E7%9F%A5%E8%AF%86%E6%98%9F%E7%90%83-%E4%BA%BA%E4%BA%BA%E9%83%BD%E6%98%AFPythonista.jpeg" alt="知识星球二维码">
+
+
+
 

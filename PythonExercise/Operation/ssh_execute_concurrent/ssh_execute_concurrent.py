@@ -153,7 +153,7 @@ class run(object):
         with futures.ThreadPoolExecutor(max_workers=int(thread_num)) as executor:
             for hostname in self.update_hosts:
                 # 得到异步提交的future对象(也就是executor)的结果
-                e = executor.submit(method,ip,cmd)
+                e = executor.submit(method,hostname,cmd)
                 # 生成对象结果与主机名相对应的字典
                 obj_dict[e] = hostname
 

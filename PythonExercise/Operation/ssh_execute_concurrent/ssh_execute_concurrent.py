@@ -140,52 +140,34 @@ class run(object):
         progress = ProgressBar()
         proceed_progress = progress(range(total_host))
 
-        # 多线程相关处理，具体用法可以参见
-        # 这里创建了线程池，max_workers是默认的处理线程个数
-        # 参见https://docs.python.org/3/library/concurrent.futures.html
-        '''
-        futures.ThreadPoolExecutor的官方解释如下：
-        class concurrent.futures.ThreadPoolExecutor(max_workers=None, thread_name_prefix='', initializer=None, initargs=())
-        An Executor subclass that uses a pool of at most max_workers threads to execute calls asynchronously.
-        initializer is an optional callable that is called at the start of each worker thread; initargs is a tuple of arguments passed to the initializer. 
-        Should initializer raise an exception, all currently pending jobs will raise a BrokenThreadPool, as well as any attempt to submit more jobs to the pool.
-        '''
-        with futures.ThreadPoolExecutor(max_workers=int(thread_num)) as executor:
-            for hostname in self.update_hosts:
-                # 得到异步提交的future对象(也就是executor)的结果
-                e = executor.submit(method,hostname,cmd)
-                # 生成对象结果与主机名相对应的字典
-                obj_dict[e] = hostname
+# 多线程相关处理，具体用法可以参见
+# 这里创建了线程池，max_workers是默认的处理线程个数
+# 参见https://docs.python.org/3/library/concurrent.futures.html
+with futures.ThreadPoolExecutor(max_workers=int(thread_num)) as executor:
+    for hostname in self.update_hosts:
+        # 得到异步提交的future对象(也就是executor)的结果
+        e = executor.submit(method,hostname,cmd)
+        # 生成对象结果与主机名相对应的字典
+        obj_dict[e] = hostname
 
-            # concurrent.futures.as_completed返回了一个迭代器，yield那些完成的futures对象
-            # 任何futures在调用as_completed()之前完成首先被yield。
-            # 参见https://docs.python.org/3/library/concurrent.futures.html
-            '''
-            concurrent.futures.as_completed的官方解释如下：
-            concurrent.futures.as_completed(fs, timeout=None)
-            Returns an iterator over the Future instances (possibly created by different Executor instances) given by fs that yields futures as they complete (finished or were cancelled). 
-            Any futures given by fs that are duplicated will be returned once. 
-            Any futures that completed before as_completed() is called will be yielded first. 
-            The returned iterator raises a concurrent.futures.
-            TimeoutError if __next__() is called and the result isn’t available after timeout seconds from the original call to as_completed(). 
-            timeout can be an int or float. 
-            If timeout is not specified or None, there is no limit to the wait time.
-            '''
-            for future in futures.as_completed(obj_dict):
-                # 从futures.as_completed返回的迭代器中获取主机名字
-                host_name = obj_dict[future]
-                # 捕获异常
-                if future.exception() is not None:
-                    logging.error('generated an exception: %s' % (future.exception()))
-                else:
-                    # 获取结果
-                    n , e = future.result()
-                    # 日志里打印实时进度
-                    logging.info('percent: {1:0.2f}%,  excuting host: {0} '.format(host_name,(current_hostname/float(total_host))*100))
-                    # 每循环一次，进度条走一格
-                    proceed_progress.__next__()
-                    # 用于显示实时脚本执行进度
-                    current_hostname += 1
+    # concurrent.futures.as_completed返回了一个迭代器，yield那些完成的futures对象
+    # 任何futures在调用as_completed()之前完成首先被yield。
+    # 参见https://docs.python.org/3/library/concurrent.futures.html
+    for future in futures.as_completed(obj_dict):
+        # 从futures.as_completed返回的迭代器中获取主机名字
+        host_name = obj_dict[future]
+        # 捕获异常
+        if future.exception() is not None:
+            logging.error('generated an exception: %s' % (future.exception()))
+        else:
+            # 获取结果
+            n , e = future.result()
+            # 日志里打印实时进度
+            logging.info('percent: {1:0.2f}%,  excuting host: {0} '.format(host_name,(current_hostname/float(total_host))*100))
+            # 每循环一次，进度条走一格
+            proceed_progress.__next__()
+            # 用于显示实时脚本执行进度
+            current_hostname += 1
         try:
             # 进度条结束，捕获迭代异常
             proceed_progress.__next__()

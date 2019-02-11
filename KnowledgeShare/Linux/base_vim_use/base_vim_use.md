@@ -216,7 +216,7 @@ vim -M file。
   * ":qall"放弃所有操作并退出
   * ":wall"保存所有，":wqall"保存所有并退出。
 
-52.为每一个文件打开一个窗口
+52. 为每一个文件打开一个窗口
   使用"-o"选项可以让Vim为每一个文件打开一个窗口：
   "vim -o one.txt two.txt three.txt"。
 

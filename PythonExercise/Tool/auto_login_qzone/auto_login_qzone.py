@@ -18,8 +18,8 @@ browser.switch_to_frame('login_frame')
 # 模拟点击登录按钮
 # 根据id定位“用户名密码登录”按钮并点击
 browser.find_element_by_id('switcher_plogin').click()
-browser.find_element_by_id('u').clear()
 # 查找元素为u的id并发送qq号
+browser.find_element_by_id('u').clear()
 browser.find_element_by_id('u').send_keys('qq号')
 browser.find_element_by_id('p').clear()
 # 查找为p的id并发送qq密码

@@ -15,12 +15,13 @@ browser.get("http://qzone.qq.com")
 # 有时候我们定位一个元素，定位器没有问题，但一直定位不了，这时候就要检查这个元素是否在一个frame中，selenium  webdriver 提供了一个switch_to_frame方法，可以很轻松的来解决
 browser.switch_to_frame('login_frame')
 
+# 模拟点击登录按钮
 # 根据id定位“用户名密码登录”按钮并点击
 browser.find_element_by_id('switcher_plogin').click()
-# 查找元素为u的id并发送qq号
+# 根据id定位表单并发送qq号
 browser.find_element_by_id('u').clear()
 browser.find_element_by_id('u').send_keys('qq号')
-# 查找为p的id并发送qq密码
+# 根据id定位表单并发送qq密码
 browser.find_element_by_id('p').clear()
 browser.find_element_by_id('p').send_keys('qq密码')
 # 查找登录按钮，并点击按钮

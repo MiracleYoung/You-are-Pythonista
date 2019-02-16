@@ -10,6 +10,8 @@ def collector_load():
     # 读取系统负载信息
     load_file = open("/proc/loadavg")
     content = load_file.read().split()
+    # content :
+    # ['3.69', '1.81', '1.10', '1/577', '20499']
     # 关闭文件
     load_file.close()
     # 生成1分钟，5分钟，15分钟负载对应的字典
@@ -29,6 +31,8 @@ def collect_memory_info():
     # 读取内存信息，并生成字典
     with open("/proc/meminfo") as mem_file:
         for line in mem_file:
+            # line:
+            # 'MemTotal:       16456100 kB'
             # 过滤出所要信息
             memory_buffer[line.split(':')[0]] = string.atoi(line.split(':')[1].split()[0])
     mem_total = memory_buffer["MemTotal"]
@@ -60,6 +64,8 @@ def collect_io_info():
     with open("/proc/diskstats") as io_file:
         for line in io_file:
             line_fields = line.split()
+            # line_fields:
+            # ['8', '16', 'sdb', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
             device_name = line_fields[2]
             # 没数据就继续
             if line_fields[3] == "0":
@@ -93,6 +99,8 @@ def collect_net_info():
     # 读取磁盘网络信息
     with open("/proc/net/dev") as net_file:
         for line in net_file:
+            # line:
+            # 'eth0:60499294899 78912073    0    0    0     0          0         6 14724590550 52928083    0    0    0     0       0          0'
             # 过滤掉非数据行
             if line.find(":") < 0:
                 continue
@@ -100,6 +108,8 @@ def collect_net_info():
             # 是否存在对应网卡
             if should_collect_card(card_name):
                 line_fields = line.split(":")[1].lstrip().split()
+                # line_fileds:
+                # ['60521993491', '78936985', '0', '0', '0', '0', '0', '6', '14726090897', '52946642', '0', '0', '0', '0', '0', '0']
                 # /proc/net/dev的解释，可以参见https://blog.csdn.net/yzy1103203312/article/details/77848192
                 net_buffer[card_name] = {
                     "InBytes": string.atoi(line_fields[0]),

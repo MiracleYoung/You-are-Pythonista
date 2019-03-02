@@ -80,12 +80,11 @@ def main(date,startcity,endcity):
         print('*'*100)
 
 
-date = str(input('请输入日期(格式“2019-01-01”)： '))
-startcity = str(input('出发站： '))
-endcity = str(input('到达站：'))
-
 if __name__ == '__main__':
     try:
+        date = str(input('请输入日期(格式“2019-01-01”)： '))
+        startcity = str(input('出发站： '))
+        endcity = str(input('到达站：'))
         main(date,startcity,endcity)
     except KeyError:
         print('您输入的数据有问题，请重新输入')

@@ -95,12 +95,6 @@
 
 ---
 
-最后这个星球除了Python，还有Python周边的一切，运维开发、自动化测试、网站开发、大数据分析等。
-
-早就是一种优势，星球每过百人加100！
-
-敬请期待！
-
 # 其他
 
 如果你也想加入我们，一起学习Python，和万人一起成为一名Pythonista。
@@ -109,6 +103,7 @@
 
 <div align="center">
     <img width="40%" src="https://raw.githubusercontent.com/MiracleYoung/You-are-Pythonista/master/static/image/%E7%9F%A5%E8%AF%86%E6%98%9F%E7%90%83-%E4%BA%BA%E4%BA%BA%E9%83%BD%E6%98%AFPythonista.jpeg" alt="知识星球二维码">
+    <img width="40%" src="https://raw.githubusercontent.com/MiracleYoung/You-are-Pythonista/master/static/image/Python专栏公众号二维码.jpeg" alt="公众号二维码">
 </div>
 
 

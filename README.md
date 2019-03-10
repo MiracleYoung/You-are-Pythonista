@@ -1,6 +1,8 @@
 # You-are-Pythonista
 汇聚【Python应用】【Python实训】【Python技术分享】等等
 
+请仔细阅读本文档，尤其是**使用说明**。
+
 # 目录说明
 - LearnFromZero: 从零学习Python
 - PythonExercise: Python练习、应用
@@ -46,6 +48,15 @@
 
 ## TechSalon
 技术沙龙分享，一期一个文件夹
+
+## Static
+存放项目相关静态文件
+
+## Homework
+给读者自己做练习的地方，允许提交，提交格式为：在 Homework 下面自己创建一个自己的文件夹，所有练习都提交在自己目录下面。
+
+## Resource
+资源文件夹，一些学习资料，PDF，视频等都会上传在这个目录。
 
 # 星球介绍
 

@@ -1,6 +1,8 @@
 # You-are-Pythonista
 汇聚【Python应用】【Python实训】【Python技术分享】等等
 
+请仔细阅读本文档，尤其是**使用说明**。
+
 # 目录说明
 - LearnFromZero: 从零学习Python
 - PythonExercise: Python练习、应用
@@ -46,6 +48,15 @@
 
 ## TechSalon
 技术沙龙分享，一期一个文件夹
+
+## Static
+存放项目相关静态文件
+
+## Homework
+给读者自己做练习的地方，允许提交，提交格式为：在 Homework 下面自己创建一个自己的文件夹，所有练习都提交在自己目录下面。
+
+## Resource
+资源文件夹，一些学习资料，PDF，视频等都会上传在这个目录。
 
 # 星球介绍
 
@@ -95,12 +106,6 @@
 
 ---
 
-最后这个星球除了Python，还有Python周边的一切，运维开发、自动化测试、网站开发、大数据分析等。
-
-早就是一种优势，星球每过百人加100！
-
-敬请期待！
-
 # 其他
 
 如果你也想加入我们，一起学习Python，和万人一起成为一名Pythonista。
@@ -109,6 +114,7 @@
 
 <div align="center">
     <img width="40%" src="https://raw.githubusercontent.com/MiracleYoung/You-are-Pythonista/master/static/image/%E7%9F%A5%E8%AF%86%E6%98%9F%E7%90%83-%E4%BA%BA%E4%BA%BA%E9%83%BD%E6%98%AFPythonista.jpeg" alt="知识星球二维码">
+    <img width="40%" src="https://raw.githubusercontent.com/MiracleYoung/You-are-Pythonista/master/static/image/Python专栏公众号二维码.jpeg" alt="公众号二维码">
 </div>
 
 

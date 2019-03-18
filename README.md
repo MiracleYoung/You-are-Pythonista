@@ -113,8 +113,8 @@
 改变生活从改变自己开始。
 
 <div align="center">
-    <img width="40%" src="https://raw.githubusercontent.com/MiracleYoung/You-are-Pythonista/master/static/image/%E7%9F%A5%E8%AF%86%E6%98%9F%E7%90%83-%E4%BA%BA%E4%BA%BA%E9%83%BD%E6%98%AFPythonista.jpeg" alt="知识星球二维码">
-    <img width="40%" src="https://raw.githubusercontent.com/MiracleYoung/You-are-Pythonista/master/static/image/Python专栏公众号二维码.jpeg" alt="公众号二维码">
+    <img width="40%" src="https://raw.githubusercontent.com/MiracleYoung/You-are-Pythonista/master/Static/image/%E7%9F%A5%E8%AF%86%E6%98%9F%E7%90%83-%E4%BA%BA%E4%BA%BA%E9%83%BD%E6%98%AFPythonista.jpeg" alt="知识星球二维码">
+    <img width="40%" src="https://raw.githubusercontent.com/MiracleYoung/You-are-Pythonista/master/Static/image/Python专栏公众号二维码.jpeg" alt="公众号二维码">
 </div>
 
 

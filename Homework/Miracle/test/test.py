@@ -9,13 +9,14 @@ import sys
 import signal
 
 # 全局变量
-# TODO: 解释下干嘛的
+# 防止并发，本篇文章先做单线程处理
 interrupted = False
 
 
 def signal_handler(signal, frame):
     '''
-    :param signal: TODO 这2个参数又是干嘛的，什么时候用的
+    定义一个信号处理函数，该函数将接收所有信号
+    :param signal: 信号
     :param frame:
     :return:
     '''
@@ -39,17 +40,16 @@ if len(sys.argv) == 1:
 
 model = sys.argv[1]
 
-# TODO：这一步在干嘛？
+# SIGINT：连接中断信号，设置处理的handler
 signal.signal(signal.SIGINT, signal_handler)
 
-# TODO：这一步又在干嘛？
+# 主程序在这里执行，sleep_time=0.03 秒
 detector = snowboydecoder.HotwordDetector(model, sensitivity=0.3)
 print('Listening... Press Ctrl+C to exit')
 
 # 函数主体循环
-# TODO：detected_callback作用
-# TODO：interrupt_check作用
-# TODO：sleep_time作用
+# detected_callback：检查填充有麦克风数据的环形缓冲区，以查看是否检测到一个唤醒词，如果是则触发该函数
+# interrupt_check：如果它返回True，则断开主循环并返回
 detector.start(detected_callback=snowboydecoder.play_audio_file,
                interrupt_check=interrupt_callback,
                sleep_time=0.03

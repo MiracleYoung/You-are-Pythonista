@@ -7,16 +7,18 @@ class run():
 
     def __init__(self):
         '''
-        初始化数据库
-        初始化用户表
-        初始化密码表
-        初始化命令对应功能函数字典
+        初始化操作
         '''
+        # 建立连接
         self.client = MongoClient('127.0.0.1', 27017)
+        # 定义数据库名
         self.db_name = 'wangtiejiang'
         self.db = self.client[self.db_name]
+        # 定义表名
         self.collection_user = self.db['account']
+        # 定义表名
         self.collection_passwd = self.db['passwd']
+        # 定义命令对应功能函数字典
         self.action_dict = {
             'delete': self.new_delete,
             'update': self.new_update,
@@ -31,8 +33,11 @@ class run():
         '''
         user = input('请输入需要删除的用户名：').strip('\r')
         for item in self.collection_user.find():
-            # 删除索引对应的数据
+            # item
+            # {'电话': 6666, '用户名': 'wangtiejiang', '年龄': 18, '_id': ObjectId('5c9641b10988c305a43623a1')}
+            # 删除对应的数据
             if user == item["用户名"]:
+                # 删除对应数据
                 self.collection_user.remove({'用户名': user })
                 print('用户\'{}\'删除成功!'.format(user))
                 break
@@ -45,7 +50,7 @@ class run():
         '''
         print('输入格式： 用户名:年龄:联系方式')
         user,age,tel = input('>>> ').split(':')
-        # 数据写入字典
+        # 写入数据库
         self.collection_user.insert(
             {
              '用户名': user,
@@ -61,6 +66,7 @@ class run():
         查找用户名
         '''
         user = input('请输入需要查找的用户名：')
+        # 查找对应数据，并返回结果
         user_result = self.collection_user.find_one({'用户名': user })
         if user_result:
             print('用户名:{},年龄:{},联系方式:{}'.format(user_result['用户名'], user_result['年龄'], user_result['电话']))
@@ -69,20 +75,13 @@ class run():
 
     def new_show(self):
         '''
-        展示所有用户名，并排序
+        展示所有用户名
         '''
-        user_dict = {
-            'user': '用户名',
-            'age': '年龄',
-            'tel': '电话'
-        }
-        sort_filed = input('请指定排序字段(默认不排序):')
-        if sort_filed in ['user','age','tel']:
-            for item in self.collection_user.find().sort(user_dict[sort_filed],ASCENDING):
-                print('用户名:{},年龄:{},联系方式:{}'.format(item['用户名'],item['年龄'],item['电话']))
-        else:
-            for item in self.collection_user.find():
-                print('用户名:{},年龄:{},联系方式:{}'.format(item['用户名'], item['年龄'], item['电话']))
+        # 遍历数据并格式化打印
+        for item in self.collection_user.find():
+            # item
+            # {'电话': 6666, '用户名': 'wangtiejiang', '年龄': 18, '_id': ObjectId('5c9641b10988c305a43623a1')}
+            print('用户名:{},年龄:{},联系方式:{}'.format(item['用户名'], item['年龄'], item['电话']))
 
     def new_exit(self):
         '''
@@ -96,17 +95,21 @@ class run():
         '''
         修改密码
         '''
+        # 获取原始密码
         user_input_old_passwd = getpass.getpass('准备修改管理员密码，请输入原密码:')
+        # 获取数据库中密码
         for item in self.collection_passwd.find():
             if item['密码']:
                 self.passwd = item['密码']
             break
         if self.passwd == '':
             print('密码异常,请检查数据库')
+        # 检查原密码是否正确
         if user_input_old_passwd == self.passwd:
             while True:
                 count = 0
                 user_input_new_passwd = getpass.getpass('准备修改管理员密码，请输入新密码:')
+                # 检查原密码与新密码是否相同
                 if user_input_old_passwd == user_input_new_passwd:
                     if  count > 3:
                         print('输入次数过多')
@@ -114,7 +117,10 @@ class run():
                     print('新密码和旧密码一样，请重新输入')
                     count += 1
                 else:
+                    # 修改密码
+                    # 清空密码表
                     self.collection_passwd.remove()
+                    # 插入新密码
                     self.collection_passwd.insert({'密码': user_input_new_passwd})
                     print('密码修改成功')
                     break
@@ -126,6 +132,7 @@ class run():
     def main(self):
         print('程序启动啦！！！')
         while True:
+            # 获取最新密码
             for item in self.collection_passwd.find():
                 if item['密码']:
                     self.passwd_in_mongo = item['密码']
@@ -134,6 +141,7 @@ class run():
             action = input(">>> ").strip('\r')
             if not action:
                 continue
+            # 修改密码
             if action == 'change':
                 self.new_changepasswd()
             elif action in self.action_dict:

@@ -13,7 +13,7 @@ txt = ' ' .join(ls)
 # 设置词云参数
 w = wordcloud.WordCloud(
     # 设置字体 
-    font_path = 'msyh.ttc', 
+    font_path = 'SIMYOU.TTF', 
     # 设置输出的图片宽高像素值
     width = 1000, height = 700,
     # 设置输出的图片背景色

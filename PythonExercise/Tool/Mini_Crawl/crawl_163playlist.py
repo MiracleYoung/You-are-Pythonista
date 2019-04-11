@@ -6,7 +6,7 @@ url = 'https://music.163.com/#/discover/playlist/?order=hot&cat=%E5%85%A8%E9%83%
 browser = webdriver.Chrome()
 
 # 逐页解析，直至歌单列表的最后一页
-while url != 'javacript:void(0)':
+while url != 'javascript:void(0)':
     # 用WebDriver加载页面
     browser.get(url)
     # 切换至内容的iframe

@@ -22,7 +22,7 @@ word_cut_join = " ".join(word_cut)
 # 设置词云参数
 wc = WordCloud(
     # 设置字体  
-    font_path='msyh.ttc',
+    font_path='SIMYOU.TTF',
     # 允许最大词汇量
     max_words = 2000,
     # 设置最大号字体大小

@@ -1,5 +1,11 @@
 # You-are-Pythonista
-汇聚【Python应用】【Python实训】【Python技术分享】等等
+汇聚【从零单排】【实战项目】【Python面试题】【大航海】【Python应用】【Python错题集】【技术沙龙】【内推渠道】等等
+
+【人人都是Pythonista】由公众号【Python专栏】推出，请认准唯一标识：
+
+<div align="center">
+    <img width="40%" src="https://raw.githubusercontent.com/MiracleYoung/You-are-Pythonista/master/Static/image/Python专栏公众号二维码.jpg" alt="公众号二维码">
+</div>
 
 请仔细阅读本文档，尤其是**使用说明**。
 
@@ -114,7 +120,6 @@
 
 <div align="center">
     <img width="40%" src="https://raw.githubusercontent.com/MiracleYoung/You-are-Pythonista/master/Static/image/%E7%9F%A5%E8%AF%86%E6%98%9F%E7%90%83-%E4%BA%BA%E4%BA%BA%E9%83%BD%E6%98%AFPythonista.jpeg" alt="知识星球二维码">
-    <img width="40%" src="https://raw.githubusercontent.com/MiracleYoung/You-are-Pythonista/master/Static/image/Python专栏公众号二维码.jpeg" alt="公众号二维码">
 </div>
 
 

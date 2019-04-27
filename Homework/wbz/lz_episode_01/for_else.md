@@ -1,4 +1,4 @@
-#求100以内的质数
+# 求100以内的质数
 ```
 import math
 for i in range(2,100):

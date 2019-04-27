@@ -9,3 +9,6 @@ for i in range(2,100):
         print(i,end=' ')
         
         
+  ![https://github.com/wubaozhen/You-are-Pythonista/blob/master/Homework/wbz/lz_episode_01/01_01.PNG]
+        
+        

@@ -11,4 +11,4 @@ def F(n):
 for i in range(1,20):
     print(F(i),end=' ')
 ```
-![image]()
+![image](https://github.com/wubaozhen/You-are-Pythonista/blob/master/Homework/wbz/lz_episode_01/01_03.PNG)

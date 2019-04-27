@@ -7,4 +7,4 @@ def jihe(n):
 
 jihe(2)
 ```
-![image]()
+![image](https://github.com/wubaozhen/You-are-Pythonista/blob/master/Homework/wbz/lz_episode_01/01-02.PNG)

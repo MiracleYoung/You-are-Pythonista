@@ -39,6 +39,3 @@ if __name__ == '__main__':
     # filepath = 'D:\\log.txt'
     # main(filepath)
     print(log_generate())
-
-
-# 尝试下封装成类对象

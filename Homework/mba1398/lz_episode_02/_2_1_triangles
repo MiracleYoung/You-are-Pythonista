@@ -19,7 +19,7 @@ def triangles(n):
 
 
 def nr_kc_triangles(n, k):
-    # 将杨辉三角转换为list,最后一个元素即为杨辉三角第n行，其k-1个即为k-1列
+    # 将杨辉三角转换为list,最后一个元素即为杨辉三角第n行，其k-1个即为k列
     # 打印杨辉三角n行k列元素值
     print(list(triangles(n))[-1][k-1])
 

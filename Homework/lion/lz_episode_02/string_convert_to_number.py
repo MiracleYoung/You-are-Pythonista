@@ -50,6 +50,5 @@ def main():
         print(type(num))
 
 
-
 if __name__ == '__main__':
     main()

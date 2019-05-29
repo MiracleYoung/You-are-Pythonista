@@ -44,8 +44,6 @@ def selfFloat(str1):
 
     return number
 
-
-
 if __name__ == '__main__':
     print(selfInt('101'))
     print(selfInt('11.2'))

@@ -18,4 +18,5 @@ def yanghui(n):
 
 print(yanghui(10))
 
+
 ![image](https://github.com/wubaozhen/You-are-Pythonista/blob/master/Homework/wbz/lz_episode_02/02_01.PNG)

@@ -26,6 +26,6 @@ def Sint(s):
 s = '123.456'
 print(Sint(s))
 
-![image]()
+![image](https://github.com/wubaozhen/You-are-Pythonista/blob/master/Homework/wbz/lz_episode_02/02_03.PNG)
 
 

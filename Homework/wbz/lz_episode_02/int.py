@@ -1,4 +1,5 @@
-#### 将字符串转换成int类型或float类型
+# 将字符串转换成int类型或float类型
+```
 def Sint(s):
     '''
     字符串转整数，利用乘以10的幂，eg：10**1 = 10 10**2 = 100 ;小数部分利用除以10，eg:4/10 = 0.4  4/100 = 0.04
@@ -26,7 +27,7 @@ def Sint(s):
 
 s = '123.456'
 print(Sint(s))
-
+```
 ![image](https://github.com/wubaozhen/You-are-Pythonista/blob/master/Homework/wbz/lz_episode_02/02_03.PNG)
 
 

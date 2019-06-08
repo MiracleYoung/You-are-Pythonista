@@ -1,4 +1,5 @@
 # 矩阵转置
+```
 def matrix(L):
     '''
     利用索引值相同取每个子列表上的元素，组合成一个新的子列表
@@ -15,5 +16,5 @@ def matrix(L):
     return L_trans
 L = [[1,2],[3,4],[5,6]]
 print(matrix(L))
-
+```
 ![image](https://github.com/wubaozhen/You-are-Pythonista/blob/master/Homework/wbz/lz_episode_02/02_02.PNG)

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from functools import wraps
 
 
 # 将被装饰器注册过的函数放入字典
@@ -8,7 +9,7 @@ func_dict = dict()
 def register(func):
     # 直接将函数放入字典 解决未调用函数无法添加到字典的问题
     func_dict[func.__name__] = func
-
+    @wraps(func)  # 保留函数原来的注释
     def wrap(*args, **kwargs):
         ret = func(*args, **kwargs)
         return ret

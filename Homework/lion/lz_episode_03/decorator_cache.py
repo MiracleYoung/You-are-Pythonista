@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from functools import wraps
 
 
 FUNC_VALUE = dict()
@@ -7,7 +8,7 @@ FUNC_VALUE = dict()
 def cache(times):  # times 自定期过期参数，第一次计算之后的times次数以内返回缓存结果
     # 记录函数缓存时间
     nums = times
-
+    @wraps(func)
     def _cache(func):
         def wrap(*args, **kwargs):
             nonlocal times

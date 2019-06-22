@@ -1,7 +1,6 @@
 # Change By 小胖
 .idea/
 .DS_Store
-.vscode
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

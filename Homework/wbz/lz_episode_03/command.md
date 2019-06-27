@@ -34,6 +34,5 @@ while True:
             break
 
     print('>>结果',result)
-    
-    ```
+ ```
     ![image](https://github.com/wubaozhen/You-are-Pythonista/blob/master/Homework/wbz/lz_episode_03/03_02.PNG)

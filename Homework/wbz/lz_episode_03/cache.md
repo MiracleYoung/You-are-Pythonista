@@ -1,3 +1,5 @@
+#### 写一个cache装饰器，允许过期。当某个函数被cache装饰器装饰过后，在过期时间内重复调用它，是返回的缓存结果，而不是去重新计算。
+```
 import datetime
 
 def cache(s,curr_time = datetime.datetime.now()):
@@ -38,3 +40,4 @@ def add(a,b):
 
 
 print(add(4,7))
+```

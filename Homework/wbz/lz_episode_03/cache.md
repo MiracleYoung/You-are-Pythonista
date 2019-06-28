@@ -1,5 +1,7 @@
 #### 写一个cache装饰器，允许过期。当某个函数被cache装饰器装饰过后，在过期时间内重复调用它，是返回的缓存结果，而不是去重新计算。
 ```
+# 先在本地建2个空的文本文件，result.txt 和 time.txt
+
 import datetime
 
 def cache(s,curr_time = datetime.datetime.now()):

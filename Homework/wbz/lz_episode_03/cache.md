@@ -50,4 +50,4 @@ print(add(4,8))
 time.sleep(20)
 print(add(4,9))                  
 ```
-![image]()
+![image](https://github.com/wubaozhen/You-are-Pythonista/blob/master/Homework/wbz/lz_episode_03/03_01.PNG)

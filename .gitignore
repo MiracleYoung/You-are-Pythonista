@@ -1,4 +1,4 @@
-# Change By 小胖
+﻿# Change By 小胖
 .idea/
 .DS_Store
 
@@ -106,3 +106,5 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+Homework/lz_episode_01

@@ -1,5 +1,5 @@
 # You-are-Pythonista
-汇聚【从零单排】【实战项目】【Python面试题】【大航海】【Python应用】【Python错题集】【技术沙龙】【内推渠道】等等
+汇聚【从零单排】【实战项目】【数据科学】【自然语言处理】【计算机视觉】【面试题系列】【大航海】【Python应用】【错题集】【技术沙龙】【内推渠道】等等
 
 【人人都是Pythonista】由公众号【Python专栏】推出，请认准唯一标识：
 
@@ -10,12 +10,18 @@
 请仔细阅读本文档，尤其是**使用说明**。
 
 # 目录说明
-- LearnFromZero: 从零学习Python
-- PythonExercise: Python练习、应用
-- PracticeProject: 实战项目
-- OnePiece: 大航海
-- TechSalon: 技术沙龙
+- ComputerVision: 计算机视觉
+- DataScience: 数据科学
+- Homework: 所有的作业都提交在这个目录下，每个人创建属于自己的独立目录
 - HR: 内推渠道
+- KnowledgeShare: 干货分享
+- LearnFromZero: 从零单排
+- NLP: Natual Language Processing, 自然语言处理
+- OnePiece: 大航海
+- PracticeProject: 实战项目
+- PythonExercise: Python练习、应用
+- Resource: 资源目录
+- TechSalon: 技术沙龙
 
 # 使用说明
 ## 命名规范

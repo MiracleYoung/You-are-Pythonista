@@ -1,0 +1,12 @@
+作业题目【从零单排】第四章作业
+
+1、用类实现一个contextlib.contextmanager装饰器
+提示：这是个类的用法参考上下文那一节，有提到过，也演示过怎么用，大家去搜下这个的用法。
+
+2、用类实现一个super()函数
+提示：super()继承的顺序是mro算法，如何获得mro顺序呢？可以通过getattr去获取实例方法，MethodType可以帮助你们返回一个对象方法
+return MethodType(getattr(cls, name), obj)
+
+3、实现一个LinkedList
+提示：要了解下什么是链表。然后实现一个节点类，在实现一个LinkedList类，LinkedList类里可以去实例化节点类
+可选：实现了LinkedList后，看看能否实现一个优先队列。

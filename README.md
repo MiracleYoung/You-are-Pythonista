@@ -1,5 +1,5 @@
 # You-are-Pythonista
-汇聚【从零单排】【实战项目】【Python面试题】【大航海】【Python应用】【Python错题集】【技术沙龙】【内推渠道】等等
+汇聚【从零单排】【实战项目】【数据科学】【自然语言处理】【计算机视觉】【面试题系列】【大航海】【Python应用】【错题集】【技术沙龙】【内推渠道】等等
 
 【人人都是Pythonista】由公众号【Python专栏】推出，请认准唯一标识：
 
@@ -9,24 +9,34 @@
 
 请仔细阅读本文档，尤其是**使用说明**。
 
-# 目录说明
-- LearnFromZero: 从零学习Python
-- PythonExercise: Python练习、应用
-- PracticeProject: 实战项目
-- OnePiece: 大航海
-- TechSalon: 技术沙龙
+## 目录说明
+- ComputerVision: 计算机视觉
+- DataScience: 数据科学
+- Homework: 所有的作业都提交在这个目录下，每个人创建属于自己的独立目录
 - HR: 内推渠道
+- Interview_Questions: 面试题集
+- KnowledgeShare: 干货分享
+- LearnFromZero: 从零单排
+- NLP: Natual Language Processing, 自然语言处理
+- OnePiece: 大航海
+- PracticeProject: 实战项目
+- PythonExercise: Python练习、应用
+- Resource: 资源目录
+- TechSalon: 技术沙龙
+- WeeklyReport: 每周新鲜事、分享好项目、好资源
 
-# 使用说明
-## 命名规范
-### 文件夹命名规范
+## 使用说明
+
+### 命名规范
+
+#### 文件夹命名规范
 - 必须为英文
 - 全部小写
 - 单词之间用下划线分割，例如：nagios_check_tomcat
 - 第一个单词代表项目涉及应用，若有多个采用简写，最多2个单词简写，例如：Nagios+Zabbix+Tomcat，可以简写成：monitor
 - 文件夹最多3个单词
 
-### 文件命名规范
+#### 文件命名规范
 - 必须为英文
 - 全部小写
 - 单词之间用下划线分割

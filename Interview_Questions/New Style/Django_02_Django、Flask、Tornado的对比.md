@@ -10,11 +10,11 @@ Django、Flask、Tornado的对比？
 
 3.____走的是少而精的方向，性能优越，它最出名的异步非阻塞的设计方式
 
-%!A. Flask,Django,Tornado!%
+%!A. Flask, Django, Tornado!%
 
-%!B. Django,Flask,Tornado!%
+%!B. Django, Flask, Tornado!%
 
-%!C. Django,Tornado,Flask!%
+%!C. Django, Tornado, Flask!%
 
 ------
 ## Answer

@@ -8,13 +8,13 @@ ____是一个W3C标准, 它允许浏览器向跨源服务器，发出XMLHttpRequ
 
 ____主流防御方式是在后端生成表单的时候生成一串随机token,内置到表单里成为一个字段，同时，将此串token置入session中。每次表单提交到后端时都会检查这两个值是否一致，以此来判断此次表单提交是否是可信的，提交过一次之后，如果这个页面没有生成____token,那么token将会被清空,如果有新的需求，那么token会被更新。 攻击者可以伪造POST表单提交，但是他没有后端生成的内置于表单的token，session中没有token都无济于事。
 
-%!A. CSRF,CORS,CORS !%
+%!A. CSRF, CORS, CORS!%
 
-%!B. CSRF,CORS,HTTP!%
+%!B. CSRF, CORS, HTTP!%
 
-%!C. CORS,CSRF,CSRF!%
+%!C. CORS, CSRF, CSRF!%
 
-%!C. CORS,CSRF,HTTP!%
+%!C. CORS, CSRF, HTTP!%
 
 ------
 

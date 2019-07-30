@@ -16,13 +16,13 @@
 
 6.____，将响应的内容发送给浏览器
 
-%!A. uwsgi, 中间件,,中间件,uwsgi!%
+%!A. uwsgi, 中间件, 中间件, uwsgi!%
 
-%!B. wsgi, 中间件,中间件,wsgi!%
+%!B. wsgi, 中间件, 中间件, wsgi!%
 
-%!C. wsgi, 数据库,数据库,wsgi!%
+%!C. wsgi, 数据库, 数据库, wsgi!%
 
-%!D. uwsgi, 数据库,数据库,uwsgi!%
+%!D. uwsgi, 数据库, 数据库, uwsgi!%
 
 ------
 

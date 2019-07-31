@@ -14,13 +14,13 @@ Session,Cookie,JWT的理解
 
 首先用户发出登录请求，服务端根据用户的登录请求进行匹配，如果匹配成功，将相关的信息放入payload中，利用算法，加上服务端的密钥生成token，这里需要注意的是____很重要，如果这个泄露的话，客户端就可以随机篡改发送的额外信息，它是信息完整性的保证。生成token后服务端将其返回给客户端，客户端可以在下次请求时，将token一起交给服务端，一般是说我们可以将其放在Authorization首部中，这样也就可以避免跨域问题。
 
-%!A. cookies,cookies,session,session_id,secret_key!%
+%!A. cookies, cookies, session, session_id, secret_key!%
 
-%!B. session,session,cookies,session_id,secret_Privatekey!%
+%!B. session, session, cookies, session_id, secret_Privatekey!%
 
-%!C. cookies,cookies,session,cookies_id,secret_Publickey!%
+%!C. cookies, cookies, session, cookies_id, secret_Publickey!%
 
-%!D. session,session,cookies,cookies_id,secret!%
+%!D. session, session, cookies, cookies_id, secret!%
 
 ------
 

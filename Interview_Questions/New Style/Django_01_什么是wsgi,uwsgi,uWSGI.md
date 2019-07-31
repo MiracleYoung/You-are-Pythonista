@@ -10,13 +10,13 @@ uwsgi: 与WSGI一样是一种通信协议，它是uWSGI服务器的独占协议�
 
 uWSGI: 是一个____服务器，实现了WSGI的协议，uWSGI协议，____协议
 
-%!A. web,web,http!%
+%!A. web, web, http!%
 
-%!B. http,http,https !%
+%!B. http, http, https!%
 
-%!C. web,http,http!%
+%!C. web, http, http!%
 
-%!D. http,web,https !%
+%!D. http, web, https!%
 
 ------
 

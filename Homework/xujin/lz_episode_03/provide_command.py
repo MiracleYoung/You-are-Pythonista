@@ -24,6 +24,15 @@ def add(x,y):
 def test(x):
     return x
 
+
+class E():
+    NAME = 'xujin'
+
+    def __init__(self,name,*args,**kwargs):
+        self.name = name
+
+
+
 if __name__ == '__main__':
     print("输入q退出命令模式")
     while True:

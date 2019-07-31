@@ -11,7 +11,7 @@
 
 %!B. JS, json!%
 
-%!C. Javascript, JS !%
+%!C. Javascript, JS!%
 
 ------
 

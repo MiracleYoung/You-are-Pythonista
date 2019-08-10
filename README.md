@@ -9,11 +9,12 @@
 
 请仔细阅读本文档，尤其是**使用说明**。
 
-# 目录说明
+## 目录说明
 - ComputerVision: 计算机视觉
 - DataScience: 数据科学
 - Homework: 所有的作业都提交在这个目录下，每个人创建属于自己的独立目录
 - HR: 内推渠道
+- Interview_Questions: 面试题集
 - KnowledgeShare: 干货分享
 - LearnFromZero: 从零单排
 - NLP: Natual Language Processing, 自然语言处理
@@ -22,17 +23,20 @@
 - PythonExercise: Python练习、应用
 - Resource: 资源目录
 - TechSalon: 技术沙龙
+- WeeklyReport: 每周新鲜事、分享好项目、好资源
 
-# 使用说明
-## 命名规范
-### 文件夹命名规范
+## 使用说明
+
+### 命名规范
+
+#### 文件夹命名规范
 - 必须为英文
 - 全部小写
 - 单词之间用下划线分割，例如：nagios_check_tomcat
 - 第一个单词代表项目涉及应用，若有多个采用简写，最多2个单词简写，例如：Nagios+Zabbix+Tomcat，可以简写成：monitor
 - 文件夹最多3个单词
 
-### 文件命名规范
+#### 文件命名规范
 - 必须为英文
 - 全部小写
 - 单词之间用下划线分割

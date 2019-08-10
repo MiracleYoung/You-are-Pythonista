@@ -1,4 +1,4 @@
-# Django_01_什么是wsgi,uwsgi,uWSGI?
+# Django_01_什么是wsgi_uwsgi_uWSGI?
 
 ## Question
 

@@ -4,17 +4,17 @@ import time
 
 tmp = []
 ret = []
-names = ["ip", "", "", "times", "m_r_h", "status", "request_length", "", "UA"]
-Logs = namedtuple("Logs", ["ip", "times", "method", "routing", "http_v", "status", "request_length", "UA"])
+names = ["ip", "", "", "times", "m_r_h", "status", "response_length", "", "UA"]
+Logs = namedtuple("Logs", ["ip", "times", "method", "routing", "http_v", "status", "response_length", "UA"])
     
-mappings = {
+mapping = {
     "ip": lambda x: x,
     "times": lambda x: time.mktime(time.strptime(x[1:-1], "%d/%b/%Y:%H:%M:%S %z")),
     "method": lambda x: x.strip('"').split()[0],
     "routing": lambda x: x.strip('"').split()[1],
     "http_v": lambda x: x.strip('"').split()[2],
     "status": lambda x: int(x),
-    "request_length": lambda x: int(x),
+    "response_length": lambda x: int(x),
     "UA": lambda x: x.strip('"\n'),
 }
 
@@ -46,14 +46,14 @@ def extract(data):
     s_dic = dict(zip(names, ret))
 
     log = Logs(
-        ip=mappings["ip"](s_dic['ip']),
-        times=mappings["times"](s_dic['times']),
-        method=mappings["method"](s_dic['m_r_h']),
-        routing=mappings["routing"](s_dic['m_r_h']),
-        http_v=mappings["http_v"](s_dic['m_r_h']),
-        status=mappings["status"](s_dic['status']),
-        request_length=mappings["request_length"](s_dic['request_length']),
-        UA=mappings["UA"](s_dic['UA']),
+        ip=mapping["ip"](s_dic['ip']),
+        times=mapping["times"](s_dic['times']),
+        method=mapping["method"](s_dic['m_r_h']),
+        routing=mapping["routing"](s_dic['m_r_h']),
+        http_v=mapping["http_v"](s_dic['m_r_h']),
+        status=mapping["status"](s_dic['status']),
+        response_length=mapping["response_length"](s_dic['response_length']),
+        UA=mapping["UA"](s_dic['UA']),
     )
 
     return log

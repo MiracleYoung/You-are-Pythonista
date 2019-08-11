@@ -1,4 +1,4 @@
-# Django_04_Session,Cookie,JWT的理解
+# Django_04_Session_Cookie_JWT的理解
 
 ## Question
 

@@ -1,0 +1,32 @@
+# 爬虫_27_验证码的解决
+
+## Question
+
+验证码的解决？
+
+图形验证码：干扰、杂色不是特别多的图片可以使用开源库 ____ 进行识别，太过复杂的需要借助第三方打码平台。
+
+点击和拖动滑块验证码可以借助 ____、无图形界面浏览器（chromedirver 或者 phantomjs）和 pillow 包来模拟人的点击和滑动操作，pillow 可以根据色差识别需要滑动的位置。
+
+%!A. MyQR, selenium!%
+
+%!B. MyQR, Appium!%
+
+%!C. Tesseract , selenium!%
+
+%!D. Tesseract, Appium!%
+
+------
+
+## Answer
+
+@!C!@
+
+------
+## Analysis
+
+图形验证码：干扰、杂色不是特别多的图片可以使用开源库 Tesseract 进行识别，太过复杂的需要借助第三方打码平台。
+
+点击和拖动滑块验证码可以借助 selenium、无图形界面浏览器（chromedirver 或者 phantomjs）和 pillow 包来模拟人的点击和滑动操作，pillow 可以根据色差识别需要滑动的位置。
+
+

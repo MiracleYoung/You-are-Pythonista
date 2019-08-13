@@ -72,4 +72,3 @@ if __name__ == '__main__':
                 print(result)
             count_line += 1
     print('time cost: {},total extract lines: {}'.format(time.time()-start_time,count_line))
-

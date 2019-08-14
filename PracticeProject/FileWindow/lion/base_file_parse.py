@@ -45,8 +45,10 @@ def extract_data(data):
         # print(tmp)
     else:  # 结尾处已经没有空格 需要手动添加最后一个空格后的内容
         ret.append(''.join(tmp))
+        tmp.clear()  # 清空列表 避免为下一次数据分析造成麻烦
     # 构建字典 将提取出来的内容与key对应
     tmp_dict = dict(zip(names_key, ret))
+    ret.clear()  # 清空列表
     log = Logs(
         ip=mapping['ip'](tmp_dict['ip']),
         times=mapping['times'](tmp_dict['times']),
@@ -62,13 +64,16 @@ def extract_data(data):
 
 
 def main():
-    with open('./access.log', 'r', encoding='utf-8') as f:
-        first_line = f.readline()
+    with open('c:/users/lion/desktop/access.log', 'r', encoding='utf-8') as f:
+        lines = f.readlines()
 
-    print(first_line)
-
-    data = extract_data(first_line)
-    print(data)
+    n = 0
+    for i in lines:
+        data = extract_data(i)
+        print(data)
+        if n == 200:
+            break
+        n = n + 1
 
 
 if __name__ == '__main__':

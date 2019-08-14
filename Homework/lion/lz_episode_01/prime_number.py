@@ -7,7 +7,7 @@ def main():
     start = time.time()
     prime_nums = list()
     for i in range(2, 101):
-        flag = True
+        flag = True  # 判断
 
         # 除2以外所有的质数都是奇数
         if i == 2:

@@ -3,11 +3,8 @@ from collections import namedtuple
 import time
 
 
-tmp = list()
-ret = list()
-
 # 构建字典的key values在ret中存放
-names_key = ['ip', ' ', ' ', 'times', 'method&routing&http_v', 'status', 'response_length', '-', 'UA']
+names_key = ['ip', ' ', ' ', 'times', 'm_r_v', 'status', 'response_length', 'url', 'UA']
 
 Logs = namedtuple('Log', ['ip', 'times', 'method', 'routing', 'status', 'http_v', 'response_length', 'UA'])
 # 此写法可以替代其他语言中的switch
@@ -27,6 +24,9 @@ mapping = {
 # 处理数据 数据中的每项内容按照空格分隔 遍历字符串 去除脏数据 按照空格组成需要的内容
 # [ ] " 是不需要的 遍历到此项时 不需要添加到结果集中 同时说明该符号开始后，每一项内容里的空格是包括在每一项中的
 def extract_data(data):
+    tmp = list()
+    ret = list()
+
     need_split = True  # 判断是否为闭合符号
     for i in data:
         # '[' ']' '"' 中包裹的内容是单独的一项 因此遇到此元素是需要添加标记
@@ -45,22 +45,22 @@ def extract_data(data):
         # print(tmp)
     else:  # 结尾处已经没有空格 需要手动添加最后一个空格后的内容
         ret.append(''.join(tmp))
-        tmp.clear()  # 清空列表 避免为下一次数据分析造成麻烦
     # 构建字典 将提取出来的内容与key对应
     tmp_dict = dict(zip(names_key, ret))
-    ret.clear()  # 清空列表
-    log = Logs(
-        ip=mapping['ip'](tmp_dict['ip']),
-        times=mapping['times'](tmp_dict['times']),
-        method=mapping['method'](tmp_dict['method&routing&http_v']),
-        routing=mapping['routing'](tmp_dict['method&routing&http_v']),
-        http_v=mapping['http_v'](tmp_dict['method&routing&http_v']),
-        status=mapping['status'](tmp_dict['status']),
-        response_length=mapping['response_length'](tmp_dict['response_length']),
-        UA=mapping['UA'](tmp_dict['UA']),
-    )
-
-    return log
+    try:
+        log = Logs(
+            ip=mapping['ip'](tmp_dict['ip']),
+            times=mapping['times'](tmp_dict['times']),
+            method=mapping['method'](tmp_dict['m_r_v']),
+            routing=mapping['routing'](tmp_dict['m_r_v']),
+            http_v=mapping['http_v'](tmp_dict['m_r_v']),
+            status=mapping['status'](tmp_dict['status']),
+            response_length=mapping['response_length'](tmp_dict['response_length']),
+            UA=mapping['UA'](tmp_dict['UA']),
+        )
+        return log
+    except Exception as exc:
+        print(exc)
 
 
 def main():
@@ -71,9 +71,9 @@ def main():
     for i in lines:
         data = extract_data(i)
         print(data)
-        if n == 200:
-            break
-        n = n + 1
+        # if n == 200:
+        #     break
+        # n = n + 1
 
 
 if __name__ == '__main__':

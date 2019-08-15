@@ -7,7 +7,6 @@ import time
 from collections import namedtuple
 from pathlib import Path
 
-
 # 队列
 Q = queue.Queue()
 
@@ -114,7 +113,10 @@ def window(q: queue.Queue, handler: extract, interval: int, width: int):
 
 
 def despatcher(source: source):
-    """  """
+    """ 分发器
+    
+    将窗口注册与线程运行封装
+    """
     analyers = []
 
     def register(handler, interval, width):

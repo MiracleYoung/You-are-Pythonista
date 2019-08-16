@@ -4,7 +4,7 @@ import time
 
 
 # 构建字典的key values在ret中存放
-names_key = ['ip', ' ', ' ', 'times', 'm_r_v', 'status', 'response_length', 'url', 'UA']
+names_key = ['ip', 'times', 'm_r_v', 'status', 'response_length', 'UA']
 
 Logs = namedtuple('Log', ['ip', 'times', 'method', 'routing', 'status', 'http_v', 'response_length', 'UA'])
 # 此写法可以替代其他语言中的switch
@@ -34,15 +34,17 @@ def extract_data(data):
             need_split = False
         elif i == ']':
             need_split = True
+        elif i == '-':
+            continue
         elif i == '"':
             need_split = not need_split
         elif i == ' ' and need_split:
             # 说明每项内容到了结尾的地方 需要添加到结果集中
-            ret.append(''.join(tmp))
+            if len(tmp) != 0:
+                ret.append(''.join(tmp))
             tmp.clear()  # 清空临时数据
         else:
             tmp.append(i)
-        # print(tmp)
     else:  # 结尾处已经没有空格 需要手动添加最后一个空格后的内容
         ret.append(''.join(tmp))
     # 构建字典 将提取出来的内容与key对应
@@ -64,16 +66,16 @@ def extract_data(data):
 
 
 def main():
-    with open('c:/users/lion/desktop/access.log', 'r', encoding='utf-8') as f:
+    with open('./access.log', 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
     n = 0
     for i in lines:
         data = extract_data(i)
         print(data)
-        # if n == 200:
-        #     break
-        # n = n + 1
+        if n == 1:
+            break
+        n = n + 1
 
 
 if __name__ == '__main__':

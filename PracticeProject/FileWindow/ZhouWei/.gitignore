@@ -8,3 +8,5 @@ Pipfile.lock
 *.log
 workspace.xml
 .idea
+access.log
+access.log.zip

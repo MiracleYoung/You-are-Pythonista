@@ -5,7 +5,7 @@ import shutil
 # 指定需要删除的文件后缀
 del_extension_file = ['.tmp', '._mp', '.log', '.gid', '.chk', '.old', '.xlk', '.bak']
 # 指定需要删除的目录名字
-del_temp_dir = ['cookies', 'recent', 'Temporary Internet Files', 'Temp','prefetch', 'temp']
+del_temp_dir = ['cookies', 'r ecent', 'Temporary Internet Files', 'Temp','prefetch', 'temp']
 
 # 获取系统盘路径
 root_sys_drive = os.environ['systemdrive'] + '\\'

@@ -1,0 +1,12 @@
+*.swp
+*.pyc
+__pycache__/*
+.pytest_cache/*
+Results/
+*.out
+Pipfile.lock
+*.log
+workspace.xml
+.idea
+access.log
+access.log.zip

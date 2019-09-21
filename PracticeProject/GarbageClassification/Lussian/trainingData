@@ -1,0 +1,36 @@
+from cv2 import cv2
+from PIL import Image
+import numpy as np
+import os
+
+# 创建一个垃圾分类的字典
+rubbishDict = {'dry':1, 'harmful':2, 'recycle':3, 'residual':4}
+# 创建一个存放源数据的数组
+data = []
+# 存放对应标签的数组
+label = []
+# 图片总文件夹
+imageFile = 'E:/python/Project/rubbish/image'
+# 对各个子文件夹进行读取
+for i in rubbishDict.keys():
+    # 图片路径
+    imageListDir = imageFile + '/' + i
+    # 获取该路径下的文件名目录
+    imageList = os.listdir(imageListDir)
+    # 对每一张图片进行操作
+    for j in imageList:
+        # 图片路径
+        imageDir = imageListDir + '/' + j
+        # 读取图片
+        src = cv2.imread(imageDir)
+        # 将array类型的输入转换成RGB格式的图片
+        arrayToImage = Image.fromarray(src, 'RGB')
+        # 将输入数组统一尺寸
+        sizeArray = arrayToImage.resize((50, 50))
+        data.append(np.array(sizeArray))
+        label.append(rubbishDict[i])
+# 生成训练数据集
+x_train = np.array(data)
+y_train = np.array(label)
+print(x_train.shape)
+print(y_train.shape)

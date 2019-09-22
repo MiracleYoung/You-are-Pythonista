@@ -18,7 +18,7 @@ def save_IMG():
         # 逐一遍历皮肤，此处假定一个英雄最多有15个皮肤
         for sk_num in range(15):
             # 英雄皮肤的URL链接
-            heroskin_links = 'http://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/'+str(i)+'/'+str(i)+'-bigskin-'+str(sk_num)+'.jpg'
+            heroskin_links = 'http://game.gtimg.cn/material_images/yxzj/img201606/skin/hero-info/'+str(i)+'/'+str(i)+'-bigskin-'+str(sk_num)+'.jpg'
             hl = requests.get(heroskin_links)
             if hl.status_code == 200:
                 # 将图片保存下来，并以"英雄名称_皮肤序号"方式命名

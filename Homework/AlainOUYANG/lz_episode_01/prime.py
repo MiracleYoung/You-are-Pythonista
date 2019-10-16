@@ -1,3 +1,10 @@
+'''
+@Author: AlainOUYANG
+@Date: 2019-10-16 16:45:49
+@LastEditors: AlainOUYANG
+@LastEditTime: 2019-10-16 17:17:25
+@Description: get_prime
+'''
 from math import sqrt
 
 

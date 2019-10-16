@@ -1,19 +1,26 @@
-def Fibonacci_item(n):
+'''
+@Author: AlainOUYANG
+@Date: 2019-10-16 16:52:17
+@LastEditors: AlainOUYANG
+@LastEditTime: 2019-10-16 17:17:01
+@Description: Fibonacci
+'''
+def fibonacci_item(n):
     if n <= 0:
         return 0
     elif n == 1:
         return 1
     else:
-        return Fibonacci_item(n - 1) + Fibonacci_item(n - 2)
+        return fibonacci_item(n - 1) + fibonacci_item(n - 2)
 
-def Fibonacci_list(n):
+def fibonacci_list(n):
     lst = []
     for i in range(1, n+1):
-        lst.append(Fibonacci_item(i))
+        lst.append(fibonacci_item(i))
     return lst
 
 def main():
-    print(Fibonacci_list(20))
+    print(fibonacci_list(20))
 
 if __name__ == "__main__":
     main()

@@ -1,3 +1,10 @@
+'''
+@Author: AlainOUYANG
+@Date: 2019-10-16 16:55:11
+@LastEditors: AlainOUYANG
+@LastEditTime: 2019-10-16 17:14:05
+@Description: geo_progression
+'''
 def geo_progression(a, q, n):
     if q == 1:
         S = a * n

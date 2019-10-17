@@ -2,7 +2,7 @@
 @Author: AlainOUYANG
 @Date: 2019-10-16 16:45:49
 @LastEditors: AlainOUYANG
-@LastEditTime: 2019-10-17 11:13:23
+@LastEditTime: 2019-10-17 11:23:23
 @Description: get_prime
 '''
 from math import sqrt

@@ -1,10 +1,14 @@
+#!/usr/bin/env pipenv-shebang
+# -*- coding: utf-8 -*-
+
 '''
 @Author: AlainOUYANG
 @Date: 2019-10-16 16:55:11
 @LastEditors: AlainOUYANG
-@LastEditTime: 2019-10-16 17:14:05
+@LastEditTime: 2019-10-17 20:07:25
 @Description: geo_progression
 '''
+
 def geo_progression(a, q, n):
     if q == 1:
         S = a * n

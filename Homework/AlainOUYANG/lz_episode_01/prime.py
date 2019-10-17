@@ -1,8 +1,11 @@
+#!/usr/bin/env pipenv-shebang
+# -*- coding: utf-8 -*-
+
 '''
 @Author: AlainOUYANG
 @Date: 2019-10-16 16:45:49
 @LastEditors: AlainOUYANG
-@LastEditTime: 2019-10-17 11:23:23
+@LastEditTime: 2019-10-17 20:01:29
 @Description: get_prime
 '''
 from math import sqrt

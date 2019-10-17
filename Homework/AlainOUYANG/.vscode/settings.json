@@ -1,4 +1,5 @@
 {
     "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true
+    "python.linting.pylintEnabled": true,
+    "python.pythonPath": "/Users/Ouyangzuokun/.local/share/virtualenvs/AlainOUYANG-xOgB5HA9/bin/python"
 }

@@ -1,10 +1,14 @@
+#!/usr/bin/env pipenv-shebang
+# -*- coding: utf-8 -*-
+
 '''
 @Author: AlainOUYANG
 @Date: 2019-10-16 16:52:17
 @LastEditors: AlainOUYANG
-@LastEditTime: 2019-10-16 17:17:01
-@Description: Fibonacci
+@LastEditTime: 2019-10-17 20:07:46
+@Description: fibonacci
 '''
+
 def fibonacci_item(n):
     if n <= 0:
         return 0

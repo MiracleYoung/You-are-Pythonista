@@ -1,1 +1,42 @@
+第一题：
+list=[]
+for a in range(2,101):
+    for b in range(2,a):
+        if a%b==0:
+            break
+    else:    
+        list.append(a)
+print(list)
 
+结果：
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+
+第二题：
+print('几何级数公式为：S=a+aq+aq^2+aq^3+....aq^n')
+a=int(input('请为a赋值一个数：'))
+q=int(input('请为q赋值一个数：'))
+n=int(input('请为n赋值一个数：'))
+S=0
+for i in range(1,n+1):
+    S+=a*q**i
+print(S)
+
+结果：
+几何级数公式为：S=a+aq+aq^2+aq^3+....aq^n
+请为a赋值一个数：3
+请为q赋值一个数：2
+请为n赋值一个数：4
+90
+
+第三题：
+a=1
+b=1
+n=int(input('请输入求和次数：'))
+list=[1,1]
+for i in range(n):    
+    a,b=b,a+b
+    list.append(b)
+print(list)
+
+结果：
+[1, 1, 2, 3, 5, 8, 13, 21]

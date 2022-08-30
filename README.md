@@ -74,6 +74,8 @@
 ## Resource
 资源文件夹，一些学习资料，PDF，视频等都会上传在这个目录。
 
+* [Python教程](https://www.scaler.com/topics/python)
+
 # 星球介绍
 
 【人人都是Pythonista】

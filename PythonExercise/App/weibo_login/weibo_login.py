@@ -79,7 +79,7 @@ def get_user(username):
 
 def login():
     username = 'yangqinglin_19900723@hotmail.com'
-    pwd = ',yql0723,'
+    pwd = ',****,'
     url = 'http://login.sina.com.cn/sso/login.php?client=ssologin.js(v1.3.18)'
     try:
         servertime, nonce = get_servertime()
